@@ -24,8 +24,6 @@ module.exports = class KeywordProcesser
     configMap = @keywordConfig.map or {}
     @keywordMap[k] = v for own k, v of configMap
 
-    Object.freeze this
-
   processFolder: (folder) ->
     fs.readdir folder, (err, fileList) =>
       throw err if err
